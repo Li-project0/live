@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 항상 라이트 모드 — 시스템 설정 무관 */
+:root { color-scheme: light; }
+html  { color-scheme: light; }
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Gaegu:wght@400;700&display=swap');
+
+* { -webkit-tap-highlight-color: transparent; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #fff9f0;
+  color: #3a2e2e;
+  font-family: 'Noto Sans KR', sans-serif;
+  overflow-x: hidden;
+}
+
+/* 스크롤 reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+
+/* 물결 구분선 */
+.wavy-top { margin-bottom: -2px; }
+.wavy-bottom { margin-top: -2px; }
+
+/* 크레파스 스타일 버튼 */
+.btn-crayon {
+  position: relative;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn-crayon:active {
+  transform: translateY(3px);
+}
+
+/* 카드 hover */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px) rotate(0deg);
+}
